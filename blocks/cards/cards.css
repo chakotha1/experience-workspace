@@ -25,3 +25,15 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* Zoom hover effect for cards */
+.cards.zoom > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cards.zoom > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
