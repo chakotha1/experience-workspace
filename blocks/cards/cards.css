@@ -26,15 +26,25 @@
   object-fit: cover;
 }
 
-/* Zoom hover effect for cards */
-.cards.zoom > div {
+/* Zoom hover effect on each card */
+.cards.zoom li {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   border-radius: 8px;
+  cursor: pointer;
 }
 
-.cards.zoom > div:hover {
+.cards.zoom li:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 32px rgb(0 0 0 / 20%);
+  box-shadow: 0 12px 32px rgba(0 0 0 / 20%);
+}
+
+/* Image zoom inside the card */
+.cards.zoom li .cards-card-image img {
+  transition: transform 0.3s ease;
+}
+
+.cards.zoom li:hover .cards-card-image img {
+  transform: scale(1.08);
 }
 
